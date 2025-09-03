@@ -38,7 +38,7 @@ const EditBook = () => {
     }
 
     try {
-      const response = await axios.patch(`http://localhost:4000/book/${id}`, formData);
+      const response = await axios.patch(`https://mernbackend-fi9e.onrender.com/book/${id}`, formData);
       if (response.status === 200) {
         navigate("/book/"+id);
       } else {
@@ -53,7 +53,7 @@ const EditBook = () => {
   // Fetch book data for the given ID
   const fetchBook = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/book/${id}`);
+      const response = await axios.get(`https://mernbackend-fi9e.onrender.com/book/${id}`);
       if (response.status === 200) {
         setData(response.data.data);
       }
